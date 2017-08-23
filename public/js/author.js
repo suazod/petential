@@ -34,14 +34,14 @@ $(document).ready(function() {
 
   // Function for creating a new list row for authors
   function createAuthorRow(authorData) {
-    var newTr = $("<tr>");
+    var newTr = $("<tr class='profiles-background'>");
     newTr.data("author", authorData);
     newTr.append("<td><img src='/images/photo-place.png' width='200'/></td>");
-    newTr.append("<td>" + authorData.name + "</td>");
+    newTr.append("<td class='pet-title-list'>" + authorData.name + "</td>");
     // newTr.append("<td> " + authorData.Posts.length + "</td>");
-    newTr.append("<td><a href='/blog?author_id=" + authorData.id + "'>Go to Profile</a></td>");
-    newTr.append("<td><a href='/cms?author_id=" + authorData.id + "'>Edit Profile</a></td>");
-    newTr.append("<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Pet Profile</a></td>");
+    newTr.append("<td><a href='/blog?author_id=" + authorData.id + "'><span class='view-profile-text'>Profile</span></a></td>");
+    newTr.append("<td><a href='/cms?author_id=" + authorData.id + "'><span class='edit-profile-text'>Edit</span></a></td>");
+    newTr.append("<td><a style='cursor:pointer;color:red' class='delete-author'><span class='delete-profile-text'>Delete</span></a></td>");
     return newTr;
   }
 
