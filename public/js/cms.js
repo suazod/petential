@@ -5,6 +5,14 @@ $(document).ready(function() {
   var breedInput = $("#breed");
   var bornInput = $("#born");
   var genderInput = $("#gender");
+  var ownerInput = $("#ownerName");
+  var phoneInput = $("#ownerPhone");
+  var petStatusInput = $("#petstatus");
+  var microInput = $("#microchip");
+  var allergiesInput = $("#allergies");
+  var foodInput = $("#food");
+  var vitaminsInput = $("#vitamins");
+  var playtimeInput = $("#playtime");
   var cmsForm = $("#cms");
   var authorSelect = $("#author");
   // Adding an event listener for when the form is submitted
@@ -54,6 +62,30 @@ $(document).ready(function() {
      gender: genderInput
         .val()
         .trim(),
+     ownerName: ownerInput
+        .val()
+        .trim(),
+     ownerPhone: phoneInput
+        .val()
+        .trim(),
+     microchip: microInput
+        .val()
+        .trim(),
+     petstatus: petStatusInput
+        .val()
+        .trim(),
+     allergies: allergiesInput
+        .val()
+        .trim(),
+     food: foodInput
+        .val()
+        .trim(),
+     playtime: playtimeInput
+        .val()
+        .trim(),
+     vitamins: vitaminsInput
+        .val()
+        .trim(),
       AuthorId: authorSelect.val()
     };
 
@@ -97,6 +129,14 @@ $(document).ready(function() {
         bornInput.val(data.born);
         breedInput.val(data.breed);
         genderInput.val(data.gender);
+        ownerInput.val(data.ownerName);
+        phoneInput.val(data.ownerPhone);
+        microInput.val(data.microchip);
+        petStatusInput.val(data.petstatus);
+        playtimeInput.val(data.playtime);
+        allergiesInput.val(data.allergies);
+        vitaminsInput.val(data.vitamins);
+        foodInput.val(data.food);
         authorId = data.AuthorId || data.id;
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit
@@ -146,4 +186,16 @@ $(document).ready(function() {
       window.location.href = "/blog";
     });
   }
+
+  // show/hide form important info section
+  $(function(){
+   $('.add-important-info').click(function(){
+      $('.pet-important-info').toggle('slow');
+      return false;
+   });
+});
+
+
+
+
 });

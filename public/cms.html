@@ -35,7 +35,7 @@
     <span class="title-bar-text">Petential</span>
   </div>
   <div class="title-bar-right">
-    <span class="title-bar-text"><a href="#"><i class="fa fa-home title-bar-logo"></i></a></span>
+    <span class="title-bar-text"><a href="/authors"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></span>
   </div>
 </div>
 
@@ -56,7 +56,7 @@
         <a class="btn btn-default" href="/cms">New Profile</a>
       </li> -->
 			<li>
-        <a class="btn btn-default" href="#"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+        <a class="btn btn-default expand-information" href="#"><i class="fa fa-file-text" aria-hidden="true"></i></a>
       </li>
 			<li>
         <a class="btn btn-default" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
@@ -73,7 +73,7 @@
 
 						<div class="row">
 								<div class="small-9 small-centered columns">
-									<select class="form-control" id="author"></select>
+									<select class="form-control" id="author"><option value="Select Pet">Select Pet</option></select>
 	              </div>
 						</div>
 
@@ -101,11 +101,11 @@
 								</div>
 						</div>
 
-						<div class="row">
+						<!-- <div class="row">
 								<div class="small-9 small-centered petSize columns">
-									<i class="fa fa-paw fa-lg"></i> <input class="petSizeRange" type="range" min="1" max="100" step="1"> <i class="fa fa-paw fa-4x"></i>
+									<i class="fa fa-paw fa-lg"></i> <input class="petSizeRange" type="range" min="1" max="100" step="1"> <i class="fa fa-paw fa-2x"></i>
 								</div>
-						</div>
+						</div> -->
 
 						<div class="row">
 								<div class="small-9 small-centered columns">
@@ -113,7 +113,67 @@
 								</div>
 						</div>
 
-						<button type="submit" class="button hollow secondary submit">Submit</button>
+
+
+						<div class="pet-important-info">
+							<div class="row">
+									<div class="small-9 small-centered columns">
+										<input placeholder="Enter Owner Name" type="text" class="form-control" id="ownerName">
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="small-9 small-centered columns">
+										<input placeholder="Enter Owner Phone" type="text" class="form-control" id="ownerPhone">
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="small-9 small-centered columns">
+										<input placeholder="Microchip#" type="text" class="form-control" id="microchip">
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="small-9 small-centered columns">
+										<input placeholder="Spay/Neutered" type="text" class="form-control" id="petstatus">
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="small-9 small-centered columns">
+										<input placeholder="Enter allergies" type="text" class="form-control" id="allergies">
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="small-9 small-centered columns">
+										<input placeholder="Enter multivitamins" type="text" class="form-control" id="vitamins">
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="small-9 small-centered columns">
+										<input placeholder="Enter playtime" type="text" class="form-control" id="playtime">
+									</div>
+							</div>
+
+							<div class="row">
+									<div class="small-9 small-centered columns">
+										<input placeholder="Enter favorite food" type="text" class="form-control" id="food">
+									</div>
+							</div>
+
+
+						</div>
+
+						<button type="submit" class="button create-button hollow secondary submit">Submit</button>
+						</br>
+
+						<div class="row">
+			      <a class="add-important-info" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add/View Medical, Nutritional and Pet Sitting</a></label>
+						</div>
+
 				</form>
 			</div>
 		</div>

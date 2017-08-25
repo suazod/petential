@@ -24,6 +24,7 @@ $(document).ready(function() {
   }
 
 
+
   // This function grabs posts from the database and updates the view
   function getPosts(author) {
     authorId = author || "";
@@ -75,7 +76,7 @@ $(document).ready(function() {
     deleteBtn.html("<i class='fa fa-trash' aria-hidden='true'></i>");
     deleteBtn.addClass("delete-btm delete btm");
     var editBtn = $("<button class='edit-btm'>");
-    editBtn.html("<i class='fa fa-cog' aria-hidden='true'></i>");
+    editBtn.html("<i class='fa fa-pencil' aria-hidden='true'></i>");
     editBtn.addClass("edit btn btn-info");
     var newPostTitle = $("<h2 class='pet-profile-main'>");
     var newPostDate = $("<small>");
@@ -88,14 +89,31 @@ $(document).ready(function() {
     //   "-10px"
     // });
     var newPostPanelBody = $("<div>");
+    var newPostPanelBodyExpand = $("<div class='container important-info'>");
     newPostPanelBody.addClass("panel-body pet-main-profile");
     var newPostBreed = $("<p class='pet-profile-text'>");
     newPostBreed.text("Breed: " +  post.breed);
     var newPostGender = $("<p class='pet-profile-text'>");
     newPostGender.text("Gender: " +  post.gender);
+    var newPostOwnerName = $("<div class='small-6 columns expanded-info'>");
+    newPostOwnerName.text("Parent: " +  post.ownerName);
+    var newPostOwnerPhone = $("<div class='small-6 columns expanded-info'>");
+    newPostOwnerPhone.text("Phone: " +  post.ownerPhone);
+    var newPostMicrochip = $("<div class='small-6 columns expanded-info'>");
+    newPostMicrochip.text("Microchip: " +  post.microchip);
+    var newPostPetStatus = $("<div class='small-6 columns expanded-info'>");
+    newPostPetStatus.text("Status: " +  post.petstatus);
+    var newPostAllergies = $("<div class='small-6 columns expanded-info'>");
+    newPostAllergies.text("Allergies: " +  post.allergies);
+    var newPostVitamins = $("<div class='small-6 columns expanded-info'>");
+    newPostVitamins.text("Vitamins: " +  post.vitamins);
+    var newPostPlaytime = $("<div class='small-6 columns expanded-info'>");
+    newPostPlaytime.text("Playtime: " +  post.playtime);
+    var newPostFood = $("<div class='small-6 columns expanded-info'>");
+    newPostFood.text("Fav Food: " +  post.food);
     var newPostBorn = $("<p class='pet-profile-text'>");
     newPostBorn.text("Born: " +  post.born);
-    var newPostPhoto = $("<div class='petPhoto'><img src='/images/photo-place.png' width='200'>");
+    var newPostPhoto = $("<div class='petPhoto'><img src='/images/photo-place-square.png'>");
     newPostPhoto.html(post.photo);
     var newPostBody = $("<p class='pet-profile-subtext'>");
     newPostTitle.text(post.title + " ");
@@ -103,13 +121,22 @@ $(document).ready(function() {
     newPostDate.text("Profile updated: " +  formattedDate);
     newPostPanelBody.append(deleteBtn);
     newPostPanelBody.append(editBtn);
-    newPostPanelBody.append(newPostTitle);
     newPostPanelBody.append(newPostPhoto);
+    newPostPanelBody.append(newPostTitle);
     // newPostPanelHeading.append(newPostAuthor);
     newPostPanelBody.append(newPostBreed);
     newPostPanelBody.append(newPostBorn);
     newPostPanelBody.append(newPostGender);
     newPostPanelBody.append(newPostBody);
+    newPostPanelBody.append(newPostPanelBodyExpand);
+    newPostPanelBodyExpand.append(newPostOwnerName);
+    newPostPanelBodyExpand.append(newPostOwnerPhone);
+    newPostPanelBodyExpand.append(newPostMicrochip);
+    newPostPanelBodyExpand.append(newPostPetStatus);
+    newPostPanelBodyExpand.append(newPostAllergies);
+    newPostPanelBodyExpand.append(newPostVitamins);
+    newPostPanelBodyExpand.append(newPostPlaytime);
+    newPostPanelBodyExpand.append(newPostFood);
     newPostPanelBody.append(newPostDate);
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
@@ -151,5 +178,13 @@ $(document).ready(function() {
     // "'>here</a> in order to get started!");
     blogContainer.append(messageh2);
   }
+
+  // show/hide information on profile
+  $(function(){
+   $('.expand-information').click(function(){
+      $('.important-info').toggle('slow');
+      return false;
+   });
+});
 
 });
