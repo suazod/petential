@@ -16,10 +16,50 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
-    
+
   },
     born: {
       type: DataTypes.TEXT,
+      allowNull: false,
+      len: [1]
+  },
+    ownerName: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      len: [1]
+  },
+    ownerPhone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+  },
+    microchip: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+  },
+    petstatus: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+  },
+    allergies: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+  },
+    playtime: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+  },
+    food: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+  },
+    vitamins: {
+      type: DataTypes.STRING,
       allowNull: false,
       len: [1]
   },
