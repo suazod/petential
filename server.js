@@ -24,6 +24,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("./public"));
 
+
 // Routes =============================================================
 
 require("./routes/html-routes.js")(app);
@@ -36,4 +37,3 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
-

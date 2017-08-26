@@ -9,6 +9,15 @@ overflow-x: hidden;
   font-size: 2rem;
 }
 
+.pet-title-list-share {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 2rem;
+}
+
+.share-container {
+ margin-top: 70px;
+}
+
 textarea:focus {
 background-color: transparent;
 }
@@ -352,11 +361,22 @@ font-size: 70%;
 
 }
 
+input#file {
+text-align: center !important;
+}
+
+.no-padding {
+padding: 1px 1px;
+}
+input:disabled {
+  background-color: transparent;
+}
+
 .pet-profile-subtext {
   font-size: 1em;
   color: #597385;
-margin-top: 10px;
-padding: 0 17px;
+  margin-top: 10px;
+  padding: 0 17px;
 }
 
 .delete-btm {
